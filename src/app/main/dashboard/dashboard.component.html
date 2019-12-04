@@ -1,3 +1,26 @@
-<p>
-  dashboard works!
-</p>
+<div class="content container pt-10 m-auto">
+  <!-- <div class="flex"> -->
+    <div class="px-2">
+      <span class="text-3xl block text-gray-800">Ciao!</span>
+      <div class="mt-3 h-48 w-full p-4 flex justify-around">
+        <div class="">
+          <span class="block border-b-2 text-2xl text-gray-800 uppercase leading-none border-gray-600 text-center">traduzioni</span>
+          <span class="block text-5xl text-gray-900 uppercase text-center leading-tight">45</span>
+        </div>
+        <div class="">
+          <span class="block border-b-2 text-2xl text-gray-800 uppercase leading-none border-gray-600 text-center">media</span>
+          <span class="block text-5xl text-gray-900 uppercase text-center leading-tight">10</span>
+        </div>
+        <div class="">
+          <span class="block border-b-2 text-2xl text-gray-800 uppercase leading-none border-gray-600 text-center">team</span>
+          <span class="block text-5xl text-gray-900 uppercase text-center leading-tight">2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="px-2">
+      <h3 class="text-3xl">Traduzioni in corso</h3>
+      <app-traduzione-ongoing *ngFor="let traduzione of traduzioni; let i=index" [dati]='traduzione' [test]='i'></app-traduzione-ongoing>
+    </div>
+  <!-- </div> -->
+</div>
