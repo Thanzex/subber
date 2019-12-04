@@ -4,14 +4,17 @@ import { MainComponent } from './main/main.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
-  { path: '', component: MainComponent, children: [
-    {path:'serie', loadChildren: () => import('./serie/serie.module').then(m => m.SerieModule)},
-    {path: '', pathMatch:'full' ,component: DashboardComponent}
-  ]}
+  {
+    path: '', component: MainComponent, children: [
+      { path: '', component: DashboardComponent, pathMatch: 'full' },
+      { path: 'serie', loadChildren: () => import('./serie/serie.module').then(m => m.SerieModule) },
+      { path: '**', redirectTo: '' }
+    ]
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MainRoutingModule { }
+export class MainRoutingModule { } 

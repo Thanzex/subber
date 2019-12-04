@@ -6,10 +6,11 @@ import { SerieHomeComponent } from './serie-home/serie-home.component';
 import { SerieViewComponent } from './serie-view/serie-view.component';
 import { StagioneViewComponent } from './stagione-view/stagione-view.component';
 import { EpisodioViewComponent } from './episodio-view/episodio-view.component';
+import { SerieHostComponent } from './serie-host.component';
 
 
 @NgModule({
-  declarations: [SerieHomeComponent, SerieViewComponent, StagioneViewComponent, EpisodioViewComponent],
+  declarations: [SerieHomeComponent, SerieViewComponent, StagioneViewComponent, EpisodioViewComponent, SerieHostComponent],
   imports: [
     CommonModule,
     SerieRoutingModule

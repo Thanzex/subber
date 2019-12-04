@@ -4,15 +4,17 @@ import { SerieViewComponent } from './serie-view/serie-view.component';
 import { StagioneViewComponent } from './stagione-view/stagione-view.component';
 import { EpisodioViewComponent } from './episodio-view/episodio-view.component';
 import { SerieHomeComponent } from './serie-home/serie-home.component';
+import { SerieHostComponent } from './serie-host.component';
 
 
 const routes: Routes = [
-  { path: '', children: [
-      { path: ':id', component: SerieViewComponent},
-      { path: ':id/:stagione', component: StagioneViewComponent},
-      { path: ':id/:stagione/:episodio', component: EpisodioViewComponent},
-      { path: '', component:SerieHomeComponent },
-      { path: '**', redirectTo:'' }
+  {
+    path: '', component: SerieHostComponent, children: [
+      { path: '', component: SerieHomeComponent, pathMatch: 'full' },
+      { path: ':id', component: SerieViewComponent },
+      { path: ':id/:stagione', component: StagioneViewComponent },
+      { path: ':id/:stagione/:episodio', component: EpisodioViewComponent },
+      { path: '**', redirectTo: '' }
     ]
   }
 ];
@@ -21,4 +23,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class SerieRoutingModule { }
+export class SerieRoutingModule { } 
