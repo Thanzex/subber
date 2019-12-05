@@ -5,6 +5,11 @@
   <div class="uk-navbar-right">
     <div class="uk-navbar-item set-padding mr-5 h-1">
       <img src="https://i.pravatar.cc/100" class="uk-border-circle h-full shadow-md border border-4 border-gray-200" alt="" uk-img>
+      <div uk-dropdown class="rounded">
+        <ul class="uk-nav uk-dropdown-nav">
+          <li><a (click)="logout()">Logout</a></li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

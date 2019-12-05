@@ -21,6 +21,7 @@
     <div class="px-2">
       <h3 class="text-3xl">Traduzioni in corso</h3>
       <app-traduzione-ongoing *ngFor="let traduzione of traduzioni; let i=index" [dati]='traduzione' [test]='i'></app-traduzione-ongoing>
+      <app-traduzione-ongoing-placeholder *ngIf="loading"></app-traduzione-ongoing-placeholder>
     </div>
   <!-- </div> -->
 </div>

@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  traduzioni = [
+  t = [
     {
+      uid: 1,
       nomeSerie: "Nome serie",
       stagione: 2,
       episodio: 3,
@@ -35,6 +36,7 @@ export class DashboardComponent implements OnInit {
       commento: "Lorem ipsum dolor sit amet"
     },
     {
+      uid: 1,
       nomeSerie: "Nome serie",
       stagione: 2,
       episodio: 3,
@@ -61,6 +63,7 @@ export class DashboardComponent implements OnInit {
       commento: "Lorem ipsum dolor sit amet"
     },
     {
+      uid: 1,
       nomeSerie: "Nome serie",
       stagione: 2,
       episodio: 3,
@@ -87,7 +90,14 @@ export class DashboardComponent implements OnInit {
       commento: "Lorem ipsum dolor sit amet"
     },
   ]
-  constructor() { }
+  traduzioni = []
+  loading:boolean = true;
+  constructor() {
+    setTimeout(() => {
+      this.traduzioni = this.t
+      this.loading = false;
+    }, 2000)
+  }
 
   ngOnInit() {
   }

@@ -1,3 +1,11 @@
 .animate-shadow {
   transition: box-shadow 0.2s ease-in-out;
 }
+
+span {
+  transition: color 0.15s ease-in-out;
+}
+
+.min-height {
+  min-height: 12em;
+}

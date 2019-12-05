@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 .loading {
-  display:none;
+  display: none;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -11,7 +11,7 @@
 }
 
 app-root:empty+.loading {
-  display:block;
+  display: block;
   z-index: 100;
 }
 
@@ -20,6 +20,7 @@ app-root:empty+.loading {
   width: 80px;
   height: 80px;
 }
+
 .lds-dual-ring:after {
   content: " ";
   display: block;
@@ -31,12 +32,37 @@ app-root:empty+.loading {
   border-color: black transparent black transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  // background-size: 800px 104px;
+  display: inline-block;
+  position: relative;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  
+  100% {
+    background-position: 1000px 0; 
+  }
+}

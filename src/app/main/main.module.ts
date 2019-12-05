@@ -7,9 +7,10 @@ import { MainComponent } from './main/main.component';
 import { NavComponent } from './components/nav/nav.component';
 import { SerieModule } from './serie/serie.module';
 import { TraduzioneOngoingComponent } from './components/traduzione-ongoing/traduzione-ongoing.component';
+import { TraduzioneOngoingPlaceholderComponent } from './components/traduzione-ongoing/placeholder/placeholder.component';
 
 @NgModule({
-  declarations: [DashboardComponent, MainComponent, NavComponent, TraduzioneOngoingComponent],
+  declarations: [DashboardComponent, MainComponent, NavComponent, TraduzioneOngoingComponent, TraduzioneOngoingPlaceholderComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
