@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { DocumentReference } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { auth } from 'firebase';
 
 interface UserData {
@@ -26,7 +26,7 @@ interface CurrentUser {
 export class AuthService {
   currentUser: CurrentUser = {
     data: {
-      avatar:'',
+      avatar:'https://i.pravatar.cc/200',
       nome:'pinco',
       cognome:'pallino',
       nick:'aaa',
@@ -41,6 +41,7 @@ export class AuthService {
     private auth: AngularFireAuth
   ) {
 
+    this.user$ = of(this.currentUser.data)
     auth.authState.pipe(
 
     )

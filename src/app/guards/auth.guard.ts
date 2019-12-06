@@ -36,7 +36,6 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
 
   isLoggedIn(): Observable<boolean | UrlTree> {
     return this.auth.user.pipe(
-      tap(console.log),
       map(user => !!user),
       map(status => {
         if (status)

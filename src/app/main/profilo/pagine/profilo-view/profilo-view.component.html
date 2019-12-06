@@ -1,1 +1,29 @@
-<p>profilo-view works!</p>
+<div class="container mx-auto pt-10">
+  <span class="block text-3xl ">Profilo:</span>
+  <div class="flex bg-white rounded-lg p-5 shadow-lg mt-2">
+   <div class="flex-initial">
+      <img src="{{(dati$ | async)?.avatar}}" alt="avatar" class="rounded w-48 h-48" uk-img>
+   </div>
+   <div class="flex-1 pl-4 h-full">
+     <div class="flex items-center">
+       <span class="text-3xl text-gray-800">{{(dati$ | async)?.nick}}&nbsp;-&nbsp;</span>
+       <div class="inline-block bg-blue-500 px-2 py-1 rounded text-white">Traduttore</div>
+     </div>
+     <div class="pt-2">
+      <span class="text-xl text-gray-800">{{(dati$ | async)?.nome}} {{(dati$ | async)?.cognome}}</span>
+     </div>
+   </div>
+  </div>
+  <div class="mt-8">
+    <div class="text-center -mt-2">
+      <span class="text-2xl text-gray-700">Ultime Traduzioni</span>
+    </div>
+    <div class="bg-white rounded-lg p-5 shadow-lg"></div>
+  </div>
+  <div class="mt-8">
+    <div class="text-center -mt-2">
+      <span class="text-2xl text-gray-700">Ultimi voti</span>
+    </div>
+    <div class="bg-white rounded-lg p-5 shadow-lg"></div>
+  </div>
+</div>
