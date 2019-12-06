@@ -2,6 +2,11 @@
   transition: box-shadow 0.2s ease-in-out;
 }
 
+.animate-shadow:hover {
+  transform: scale(1.005,1.005);
+  transition: transform 0.1s ease-in-out;
+}
+
 span {
   transition: color 0.15s ease-in-out;
 }

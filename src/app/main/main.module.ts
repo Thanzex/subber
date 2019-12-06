@@ -8,13 +8,15 @@ import { NavComponent } from './components/nav/nav.component';
 import { SerieModule } from './serie/serie.module';
 import { TraduzioneOngoingComponent } from './components/traduzione-ongoing/traduzione-ongoing.component';
 import { TraduzioneOngoingPlaceholderComponent } from './components/traduzione-ongoing/placeholder/placeholder.component';
+import { EditorModule } from './editor/editor.module';
 
 @NgModule({
   declarations: [DashboardComponent, MainComponent, NavComponent, TraduzioneOngoingComponent, TraduzioneOngoingPlaceholderComponent],
   imports: [
     CommonModule,
     MainRoutingModule,
-    SerieModule
+    SerieModule,
+    EditorModule
   ]
 })
 export class MainModule { }

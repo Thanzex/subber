@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
       commento: "Lorem ipsum dolor sit amet"
     },
     {
-      uid: 1,
+      uid: 2,
       nomeSerie: "Nome serie",
       stagione: 2,
       episodio: 3,
@@ -63,7 +63,7 @@ export class DashboardComponent implements OnInit {
       commento: "Lorem ipsum dolor sit amet"
     },
     {
-      uid: 1,
+      uid: 3,
       nomeSerie: "Nome serie",
       stagione: 2,
       episodio: 3,

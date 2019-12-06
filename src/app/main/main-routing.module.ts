@@ -8,6 +8,7 @@ const routes: Routes = [
     path: '', component: MainComponent, children: [
       { path: '', component: DashboardComponent, pathMatch: 'full' },
       { path: 'serie', loadChildren: () => import('./serie/serie.module').then(m => m.SerieModule) },
+      { path: 'editor', loadChildren: () => import('./editor/editor.module').then(m => m.EditorModule) },
       { path: '**', redirectTo: '' }
     ]
   }
