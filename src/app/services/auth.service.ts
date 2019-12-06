@@ -24,7 +24,17 @@ interface CurrentUser {
   providedIn: 'root'
 })
 export class AuthService {
-  currentUser: CurrentUser
+  currentUser: CurrentUser = {
+    data: {
+      avatar:'',
+      nome:'pinco',
+      cognome:'pallino',
+      nick:'aaa',
+      uid:'1'
+    },
+    isLoggedIn: false,
+
+  }
   user$: Observable<UserData>
 
   constructor(
@@ -37,7 +47,9 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
+    this.currentUser.data.nick='test'
     return this.auth.auth.signInWithEmailAndPassword(email, password)
+
   }
 
   logout() {
